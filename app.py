@@ -6,9 +6,9 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 
 # Load your trained ML models and scaler
-XGB_model = joblib.load("models/XGB_model1.pkl")
-RF_model = joblib.load("models/RF_model1.pkl")
-scaler = joblib.load("models/scaler1.pkl")
+XGB_model = joblib.load("XGB_model1.pkl")
+RF_model = joblib.load("RF_model1.pkl")
+scaler = joblib.load("scaler1.pkl")
 
 # Define parameter names
 parameter_names = [

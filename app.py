@@ -9,7 +9,7 @@ app = Flask(__name__)
 DT_model = joblib.load("DT_model1.pkl")
 XGB_model = joblib.load("XGB_model1.pkl")
 RF_model = joblib.load("RF_model1.pkl")
-SVR_model = joblib.load("SVR_model1.pkl")
+SVR_model = joblib.load("SVM_model1.pkl")
 scaler = joblib.load("scaler1.pkl")
 
 # Define parameter names

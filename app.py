@@ -10,6 +10,7 @@ DT_model = joblib.load("DT_model1.pkl")
 XGB_model = joblib.load("XGB_model1.pkl")
 RF_model = joblib.load("RF_model1.pkl")
 SVR_model = joblib.load("SVM_model1.pkl")
+ANN_model = joblib.load("ANN_model1.pkl")
 scaler = joblib.load("scaler1.pkl")
 
 # Define parameter names
@@ -50,6 +51,8 @@ def predict():
         model = DT_model
     elif selected_model == "SVR":
         model = SVR_model
+    elif selected_model == "ANN":
+        model = ANN_model
     
     # Perform prediction using the selected model
     prediction = model.predict(scaled_params)[0]

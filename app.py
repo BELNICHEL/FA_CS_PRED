@@ -15,15 +15,15 @@ scaler = joblib.load("scaler1.pkl")
 # Define parameter names
 parameter_names = [
     "W/b ratio",
-    "Cement Content",
-    "Fine Aggregate",
-    "Coarse Aggregate",
-    "SiO2",
-    "CaO",
-    "Fe2O3",
-    "Al2O3",
-    "Loss on Ignition",
-    "Superplastisizer",
+    "Cement Content (kg/m3)",
+    "Fine Aggregate (kg/m3)",
+    "Coarse Aggregate (kg/m3)",
+    "SiO2 (%)",
+    "CaO (%)",
+    "Fe2O3 (%)",
+    "Al2O3 (%)",
+    "Loss on Ignition (%)",
+    "Superplastisizer (kg/m3)",
     "Curing Days",
     "Replacement Percentage"
 ]

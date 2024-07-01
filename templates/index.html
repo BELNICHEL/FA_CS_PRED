@@ -7,20 +7,30 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
-        .form-group {
+        body {
             font-size: 14px; /* Decrease font size */
         }
+        .form-group {
+            margin-bottom: 10px; /* Reduce margin between form groups */
+        }
         .form-control {
+            padding: 5px; /* Reduce padding inside form controls */
             font-size: 14px; /* Decrease font size */
         }
         .btn {
             font-size: 14px; /* Decrease button font size */
         }
+        .container {
+            max-width: 600px; /* Restrict maximum width to fit the form on a single page */
+        }
+        label {
+            margin-bottom: 5px; /* Reduce margin below labels */
+        }
     </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Flyash Concrete Strength Predictor</h1>
+    <div class="container mt-3">
+        <h1 class="text-center mb-3">Flyash Concrete Strength Predictor</h1>
         <form action="/predict" method="post">
             <div class="form-row">
                 {% for param in parameter_names %}

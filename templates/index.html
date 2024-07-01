@@ -12,8 +12,17 @@
         }
         .form-group {
             margin-bottom: 10px; /* Reduce margin between form groups */
+            display: flex; /* Use flexbox for better alignment */
+            align-items: center; /* Center items vertically */
+        }
+        .form-group label {
+            width: 200px; /* Fixed width for labels */
+            margin-bottom: 0; /* Remove margin below labels */
+            padding-right: 10px; /* Add some space between label and input */
+            text-align: right; /* Align text to the right for labels */
         }
         .form-control {
+            flex: 1; /* Take remaining space in flex container */
             padding: 5px; /* Reduce padding inside form controls */
             font-size: 14px; /* Decrease font size */
         }
@@ -23,23 +32,18 @@
         .container {
             max-width: 600px; /* Restrict maximum width to fit the form on a single page */
         }
-        label {
-            margin-bottom: 5px; /* Reduce margin below labels */
-        }
     </style>
 </head>
 <body>
     <div class="container mt-3">
         <h1 class="text-center mb-3">Flyash Concrete Strength Predictor</h1>
         <form action="/predict" method="post">
-            <div class="form-row">
-                {% for param in parameter_names %}
-                <div class="form-group col-md-12">
-                    <label for="{{ param }}">{{ param }}</label>
-                    <input type="text" class="form-control" id="{{ param }}" name="{{ param }}" required>
-                </div>
-                {% endfor %}
+            {% for param in parameter_names %}
+            <div class="form-group">
+                <label for="{{ param }}">{{ param }}:</label>
+                <input type="text" class="form-control" id="{{ param }}" name="{{ param }}" required>
             </div>
+            {% endfor %}
             <div class="form-group">
                 <label for="model">Select Model:</label>
                 <select class="form-control" id="model" name="model">

@@ -8,29 +8,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
         body {
-            font-size: 14px; /* Decrease font size */
+            font-size: 14px;
         }
         .form-group {
-            margin-bottom: 10px; /* Reduce margin between form groups */
-            display: flex; /* Use flexbox for better alignment */
-            align-items: center; /* Center items vertically */
+            margin-bottom: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
         }
         .form-group label {
-            width: 200px; /* Fixed width for labels */
-            margin-bottom: 0; /* Remove margin below labels */
-            padding-right: 10px; /* Add some space between label and input */
-            text-align: right; /* Align text to the right for labels */
+            flex: 0 0 250px;
+            margin-bottom: 0;
+            padding-right: 10px;
+            text-align: right;
+            white-space: nowrap; /* Prevent label text from wrapping */
         }
         .form-control {
-            flex: 1; /* Take remaining space in flex container */
-            padding: 5px; /* Reduce padding inside form controls */
-            font-size: 14px; /* Decrease font size */
+            flex: 1;
+            padding: 5px;
+            font-size: 14px;
         }
         .btn {
-            font-size: 14px; /* Decrease button font size */
+            font-size: 14px;
         }
         .container {
-            max-width: 600px; /* Restrict maximum width to fit the form on a single page */
+            max-width: 800px;
         }
         .footer {
             text-align: center;
@@ -76,4 +78,3 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-

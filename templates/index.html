@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FLY ASH CONCRETE STRENGTH PREDICTOR</title>
+    <title>Fly Ash Concrete Strength Predictor</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <style>
@@ -41,17 +41,17 @@
 </head>
 <body>
     <div class="container mt-3">
-        <h1 class="text-center mb-3">Flyash Concrete Strength Predictor</h1>
-        <form action="/predict" method="post">
+        <h1 class="text-center mb-3">Fly Ash Concrete Strength Predictor</h1>
+        <form action="/predict" method="post" novalidate>
             {% for param in parameter_names %}
             <div class="form-group">
                 <label for="{{ param }}">{{ param }}:</label>
-                <input type="text" class="form-control" id="{{ param }}" name="{{ param }}" required>
+                <input type="text" class="form-control" id="{{ param }}" name="{{ param }}" aria-label="{{ param }}" required>
             </div>
             {% endfor %}
             <div class="form-group">
                 <label for="model">Select Model:</label>
-                <select class="form-control" id="model" name="model">
+                <select class="form-control" id="model" name="model" aria-label="Select Model">
                     <option value="Random Forest">Random Forest</option>
                     <option value="Extreme Gradient Boosting">Extreme Gradient Boosting</option>
                     <option value="Decision Tree">Decision Tree</option>
@@ -76,3 +76,4 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

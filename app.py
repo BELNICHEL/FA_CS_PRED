@@ -14,18 +14,18 @@ scaler = joblib.load("scaler1.pkl")
 
 # Define parameter names
 parameter_names = [
-    "W/b ratio",
-    "Cement Content (kg/m3)",
-    "Fine Aggregate (kg/m3)",
-    "Coarse Aggregate (kg/m3)",
-    "SiO2 (%)",
-    "CaO (%)",
-    "Fe2O3 (%)",
-    "Al2O3 (%)",
-    "Loss on Ignition (%)",
-    "Superplastisizer (kg/m3)",
-    "Curing Days",
-    "Replacement Percentage"
+    "W/b ratio[0.36-0.55]",
+    "Cement Content (kg/m3)[140-290]",
+    "Fine Aggregate (kg/m3)[684-895]",
+    "Coarse Aggregate (kg/m3)[975-1180]",
+    "SiO2 (%)[49.7-60]",
+    "CaO (%)[2.35-6]",
+    "Fe2O3 (%)[5.27-8]",
+    "Al2O3 (%)[21.63-28]",
+    "Loss on Ignition (%)[1-3.6]",
+    "Superplastisizer (kg/m3)[0-4.25]",
+    "Curing Days[7-90]",
+    "Replacement Percentage[30-60]"
 ]
 
 @app.route('/')
